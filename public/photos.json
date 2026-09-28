@@ -1,0 +1,76 @@
+{
+ "gallery": [
+  {
+   "id": 1,
+   "url": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_full.jpg",
+   "url_medium": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_medium.jpg",
+   "url_thumb": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_thumb.jpg",
+   "caption": ""
+  },
+  {
+   "id": 2,
+   "url": "/photos/d2d13c867c974b22b6d90766a3334832_full.jpg",
+   "url_medium": "/photos/d2d13c867c974b22b6d90766a3334832_medium.jpg",
+   "url_thumb": "/photos/d2d13c867c974b22b6d90766a3334832_thumb.jpg",
+   "caption": ""
+  },
+  {
+   "id": 3,
+   "url": "/photos/2e24121395674ac9a5357fb482d94e3f_full.jpg",
+   "url_medium": "/photos/2e24121395674ac9a5357fb482d94e3f_medium.jpg",
+   "url_thumb": "/photos/2e24121395674ac9a5357fb482d94e3f_thumb.jpg",
+   "caption": ""
+  },
+  {
+   "id": 4,
+   "url": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_full.jpg",
+   "url_medium": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_medium.jpg",
+   "url_thumb": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_thumb.jpg",
+   "caption": ""
+  },
+  {
+   "id": 5,
+   "url": "/photos/aecd0e057c3644469c6e4cf5d1a9f76d_full.jpg",
+   "url_medium": "/photos/aecd0e057c3644469c6e4cf5d1a9f76d_medium.jpg",
+   "url_thumb": "/photos/aecd0e057c3644469c6e4cf5d1a9f76d_thumb.jpg",
+   "caption": ""
+  },
+  {
+   "id": 6,
+   "url": "/photos/df7f2563daa944eca1d16c5897a8aa9d_full.jpg",
+   "url_medium": "/photos/df7f2563daa944eca1d16c5897a8aa9d_medium.jpg",
+   "url_thumb": "/photos/df7f2563daa944eca1d16c5897a8aa9d_thumb.jpg",
+   "caption": "light finding its way in dark"
+  }
+ ],
+ "featured": [
+  {
+   "id": 1,
+   "url": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_full.jpg",
+   "url_medium": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_medium.jpg",
+   "url_thumb": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_thumb.jpg",
+   "caption": ""
+  },
+  {
+   "id": 2,
+   "url": "/photos/d2d13c867c974b22b6d90766a3334832_full.jpg",
+   "url_medium": "/photos/d2d13c867c974b22b6d90766a3334832_medium.jpg",
+   "url_thumb": "/photos/d2d13c867c974b22b6d90766a3334832_thumb.jpg",
+   "caption": ""
+  },
+  {
+   "id": 3,
+   "url": "/photos/2e24121395674ac9a5357fb482d94e3f_full.jpg",
+   "url_medium": "/photos/2e24121395674ac9a5357fb482d94e3f_medium.jpg",
+   "url_thumb": "/photos/2e24121395674ac9a5357fb482d94e3f_thumb.jpg",
+   "caption": ""
+  },
+  {
+   "id": 4,
+   "url": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_full.jpg",
+   "url_medium": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_medium.jpg",
+   "url_thumb": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_thumb.jpg",
+   "caption": ""
+  }
+ ]
+}

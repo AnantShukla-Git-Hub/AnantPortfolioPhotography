@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin — Anant Shukla Photography</title>
+<style>
+  body{font-family:sans-serif;max-width:720px;margin:40px auto;padding:0 16px;background:#111;color:#eee;}
+  h1{font-size:1.2rem;}
+  section{margin-bottom:32px;padding:16px;border:1px solid #333;border-radius:6px;}
+  input,textarea{width:100%;padding:8px;margin:6px 0;background:#1a1a1a;color:#eee;border:1px solid #444;border-radius:4px;}
+  button{padding:8px 14px;background:#b5522f;color:#fff;border:none;border-radius:4px;cursor:pointer;}
+  button:hover{opacity:.9;}
+  .photo-row{display:flex;gap:10px;align-items:center;border-bottom:1px solid #333;padding:8px 0;}
+  .photo-row img{width:70px;height:70px;object-fit:cover;border-radius:4px;}
+  .msg{font-size:0.85rem;color:#9c9284;}
+  label{font-size:0.85rem;color:#9c9284;}
+</style>
+</head>
+<body>
+  <h1>Admin panel — test only</h1>
+
+  <section id="login-section">
+    <h2>Login</h2>
+    <input id="username" placeholder="username" value="admin">
+    <input id="password" type="password" placeholder="password">
+    <button onclick="login()">Log in</button>
+    <div class="msg" id="login-msg"></div>
+  </section>
+
+  <section id="upload-section" style="display:none">
+    <h2>Upload a photo</h2>
+    <input type="file" id="file" accept="image/*">
+    <label>Caption (optional)</label>
+    <input id="caption" placeholder="e.g. Old Chowk, early light">
+    <label><input type="checkbox" id="featured" style="width:auto"> Mark as featured</label>
+    <button onclick="upload()">Upload</button>
+    <div class="msg" id="upload-msg"></div>
+  </section>
+
+  <section id="list-section" style="display:none">
+    <h2>All photos</h2>
+    <div id="photo-list"></div>
+  </section>
+
+<script>
+async function login(){
+  const form = new FormData();
+  form.append('username', document.getElementById('username').value);
+  form.append('password', document.getElementById('password').value);
+  const res = await fetch('/api/admin/login', {method:'POST', body: form, credentials:'include'});
+  const msg = document.getElementById('login-msg');
+  if(res.ok){
+    msg.textContent = 'Logged in.';
+    document.getElementById('upload-section').style.display='block';
+    document.getElementById('list-section').style.display='block';
+    loadPhotos();
+  } else {
+    const data = await res.json();
+    msg.textContent = 'Error: ' + (data.detail || res.status);
+  }
+}
+
+async function upload(){
+  const fileInput = document.getElementById('file');
+  if(!fileInput.files[0]){ alert('Choose a file first'); return; }
+  const form = new FormData();
+  form.append('file', fileInput.files[0]);
+  form.append('caption', document.getElementById('caption').value);
+  form.append('is_featured', document.getElementById('featured').checked);
+  const res = await fetch('/api/admin/photos', {method:'POST', body: form, credentials:'include'});
+  const msg = document.getElementById('upload-msg');
+  if(res.ok){
+    msg.textContent = 'Uploaded.';
+    fileInput.value=''; document.getElementById('caption').value=''; document.getElementById('featured').checked=false;
+    loadPhotos();
+  } else {
+    const data = await res.json();
+    msg.textContent = 'Error: ' + (data.detail || res.status);
+  }
+}
+
+async function loadPhotos(){
+  const res = await fetch('/api/admin/photos', {credentials:'include'});
+  if(!res.ok) return;
+  const photos = await res.json();
+  const list = document.getElementById('photo-list');
+  list.innerHTML = photos.map(p => `
+    <div class="photo-row">
+      <img src="${p.url}">
+      <div style="flex:1">
+        <div>${p.caption || '(no caption)'}</div>
+        <div class="msg">${p.is_featured ? 'Featured' : ''} · id ${p.id}</div>
+      </div>
+      <button onclick="del(${p.id})">Delete</button>
+    </div>
+  `).join('');
+}
+
+async function del(id){
+  if(!confirm('Delete this photo?')) return;
+  await fetch('/api/admin/photos/' + id, {method:'DELETE', credentials:'include'});
+  loadPhotos();
+}
+</script>
+</body>
+</html>

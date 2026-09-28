@@ -1,0 +1,22 @@
+# environments and secrets
+venv/
+.venv/
+.env
+*.env
+
+# local admin data: never publish
+portfolio.db
+storage/
+
+# python junk
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+
+.secret_key
