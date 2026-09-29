@@ -2,32 +2,13 @@
 
 A small portfolio for the photographs I take. The public site is a fast, static page; photos are uploaded through a private admin panel that only runs on my own computer.
 
-Live site: _add the Vercel link here after the first deploy_
-
-## Highlights
-
-- Rotating 3D carousel of featured photos (mouse wheel, drag or swipe), with a full-screen viewer
-- Masonry gallery that keeps every photo in its original aspect ratio, with optional captions
-- Light and dark themes with a glass-style interface
-- Responsive images: three sizes are generated per upload, so phones load small files and large screens stay sharp
-- Every upload gets a small handwritten signature in the bottom-right corner and has its EXIF metadata removed
+Live on: https://anant-portfolio-photography.vercel.app/
 
 ## How it works
 
 The deployed site is static: HTML, CSS, JavaScript, the watermarked photos and a `photos.json` file. It has no server, database, login or upload endpoint.
 
 Uploading happens locally. A FastAPI admin panel runs on my computer, `export_static.py` copies the finished photos and `photos.json` into `public/`, and pushing to GitHub lets Vercel publish the update.
-
-```
-app/                     FastAPI admin backend (local use only)
-  routers/               photo and admin API routes
-  fonts/                 signature font used for the watermark (SIL OFL)
-static/                  admin panel page, served at /admin-ui/
-public/                  the deployed site (Vercel root directory)
-export_static.py         writes photos, photos.json and og-image.jpg into public/
-set_admin_password.py    changes the local admin password
-requirements.txt
-```
 
 ## Run the admin panel locally
 
@@ -54,12 +35,6 @@ uvicorn app.main:app --reload
 3. `git add .`, `git commit -m "Add photos"`, `git push`
 
 Vercel settings: Root Directory `public`, Framework Preset "Other", no build command.
-
-## Security notes
-
-- Nothing in the deployed site can accept input, so there is nothing to log in to or upload through.
-- The database, original uploads, virtual environment and secret key are excluded by `.gitignore`.
-- Only resized, watermarked photos (at most 1800 px wide) are published.
 
 ## Credits and license
 
