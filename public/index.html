@@ -10,14 +10,14 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Anant Shukla — Photography">
 <meta property="og:description" content="An ordinary photographer capturing simple moments.">
-<meta property="og:url" content="https://anant-portfolio-photography.vercel.app/">
-<meta property="og:image" content="https://anant-portfolio-photography.vercel.app/og-image.jpg">
+<meta property="og:url" content="https://YOUR-SITE.vercel.app/">
+<meta property="og:image" content="https://YOUR-SITE.vercel.app/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://anant-portfolio-photography.vercel.app/og-image.jpg">
+<meta name="twitter:image" content="https://YOUR-SITE.vercel.app/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --ease:cubic-bezier(.22,.61,.36,1);
@@ -32,15 +32,23 @@
     --glass-border:rgba(255,255,255,0.14);
     --glass-blur:16px;
     --glow:rgba(255,255,255,0.55);
+    --carousel-dim-b:0.42; --carousel-dim-s:0.65;
+    --gallery-dim-b:0.55; --gallery-dim-s:0.75;
+    --glass-shadow:none;
   }
   :root[data-theme="light"]{
     --bg:#f3efe7; --text:#2a241c; --muted:#7a6f60; --copy:#453f34;
     --line:rgba(30,25,18,0.14);
     --panel:#e9e2d3; --shimmer-a:#e6dfd0; --shimmer-b:#f1ebdf;
-    --glass-bg:rgba(255,255,255,0.42);
-    --glass-border:rgba(30,25,18,0.16);
+    --glass-bg:rgba(255,255,255,0.5);
+    --glass-border:rgba(30,25,18,0.18);
     --glass-blur:16px;
     --glow:rgba(196,138,58,0.55);
+    /* the carousel/gallery dim effects were tuned for a dark backdrop and looked
+       too harsh/muddy on a light page, so they are gentler here */
+    --carousel-dim-b:0.78; --carousel-dim-s:0.9;
+    --gallery-dim-b:0.82; --gallery-dim-s:0.92;
+    --glass-shadow:0 4px 24px -8px rgba(30,25,18,0.16);
   }
   *{box-sizing:border-box}
   html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;}
@@ -54,7 +62,8 @@
   /* ---- glassmorphism utility: used by UI chrome (header, buttons, panels) ---- */
   .glass{position:relative;background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur));
     -webkit-backdrop-filter:blur(var(--glass-blur));border:1px solid var(--glass-border);
-    transition:border-color .35s var(--ease), box-shadow .35s var(--ease), background .4s var(--ease);}
+    box-shadow:var(--glass-shadow);
+    transition:border-color .35s var(--ease), box-shadow .4s var(--ease), background .4s var(--ease);}
   .glass::before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
     background:radial-gradient(220px circle at var(--mx,50%) var(--my,50%), var(--glow), transparent 62%);
     opacity:0;transition:opacity .35s var(--ease);}
@@ -67,17 +76,23 @@
     transition:background .4s var(--ease), backdrop-filter .4s var(--ease), border-color .4s var(--ease);}
   header.glass.scrolled{background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur));-webkit-backdrop-filter:blur(var(--glass-blur));
     border-bottom:1px solid var(--glass-border);}
-  header .name{font-family:'Fraunces',serif;font-size:1.05rem;letter-spacing:0.02em;}
+  header .name{font-family:'Fraunces',serif;font-size:1.05rem;letter-spacing:0.02em;
+    opacity:0;transform:translateY(-8px);transition:opacity .7s var(--ease) .15s, transform .7s var(--ease) .15s;}
+  header .name.in{opacity:1;transform:translateY(0);}
   header nav{display:flex;align-items:center;gap:26px;font-size:0.92rem;color:var(--muted);}
-  header nav a{cursor:pointer;transition:color .2s;position:relative;}
+  header nav a{cursor:pointer;transition:color .2s, transform .2s var(--ease);position:relative;display:inline-block;}
   header nav a:hover{color:var(--text);}
   header nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--text);
     transition:width .35s var(--ease);}
   header nav a:hover::after{width:100%;}
 
   .theme-toggle{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-    color:var(--text);cursor:pointer;padding:0;background:var(--glass-bg);}
+    color:var(--text);cursor:pointer;padding:0;background:var(--glass-bg);transition:color .3s var(--ease), transform .2s var(--ease);}
   .theme-toggle svg{width:16px;height:16px;pointer-events:none;}
+
+  .theme-wipe{position:fixed;inset:0;z-index:9999;pointer-events:none;
+    clip-path:circle(0px at var(--x) var(--y));
+    transition:clip-path .6s var(--ease);}
 
   .photo{position:relative;border-radius:2px;overflow:hidden;background:var(--panel);}
   .photo img{width:100%;height:100%;object-fit:cover;}
@@ -110,6 +125,8 @@
   .bio-text h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.3rem;margin:0 0 18px;}
   section.bio p{max-width:600px;font-size:1.05rem;color:var(--copy);margin:0 0 16px;}
   section.bio p:last-child{margin-bottom:0;}
+  .bio-meta{font-family:'JetBrains Mono',monospace !important;font-size:0.78rem !important;
+    color:var(--muted) !important;letter-spacing:0.02em;margin-top:18px !important;}
   @media (max-width:640px){
     .bio-inner{flex-direction:column;gap:28px;}
     .bio-portrait{flex:0 0 auto;width:150px;}
@@ -121,7 +138,7 @@
   section.featured{padding:20px 0 80px;}
   .featured-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px;}
   .featured-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.4rem;margin:0;}
-  .featured-head a{font-size:0.88rem;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:2px;white-space:nowrap;cursor:pointer;}
+  .featured-head a{font-size:0.88rem;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:2px;white-space:nowrap;cursor:pointer;display:inline-block;transition:color .2s, border-color .2s, transform .2s var(--ease);}
   .featured-head a:hover{color:var(--text);border-color:var(--text);}
 
   /* ---- 3D featured carousel ---- */
@@ -132,11 +149,11 @@
   .carousel-item{position:absolute;top:0;left:0;width:200px;height:280px;border-radius:3px;
     overflow:hidden;background:var(--panel);backface-visibility:hidden;border:1px solid transparent;
     transition:filter .35s var(--ease), opacity .35s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease);
-    filter:brightness(0.42) saturate(0.65);opacity:0.85;}
+    filter:brightness(var(--carousel-dim-b)) saturate(var(--carousel-dim-s));opacity:0.85;}
   .carousel-item img{width:100%;height:100%;object-fit:cover;pointer-events:none;}
   .carousel-item.is-center{filter:brightness(1) saturate(1);opacity:1;cursor:pointer;
     border-color:var(--glow);box-shadow:0 0 20px -6px var(--glow);}
-  .carousel-hint{text-align:center;font-size:0.78rem;color:var(--muted);margin-top:16px;}
+  .carousel-hint{text-align:center;font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);margin-top:16px;}
 
   @media (max-width:760px){
     .carousel-stage{height:260px;}
@@ -149,15 +166,28 @@
     display:flex;align-items:center;justify-content:center;padding:56px 24px 24px;
     opacity:0;pointer-events:none;transition:opacity .3s var(--ease);}
   .lightbox.open{opacity:1;pointer-events:auto;}
-  .lightbox img{max-width:100%;max-height:100%;border-radius:2px;
+  .lightbox-figure{display:flex;flex-direction:column;align-items:center;gap:14px;max-width:100%;max-height:100%;margin:0;}
+  .lightbox-figure img{max-width:100%;max-height:78vh;border-radius:2px;
     transform:scale(.97);transition:transform .35s var(--ease);}
-  .lightbox.open img{transform:scale(1);}
-  .lightbox .close{position:absolute;top:16px;right:18px;width:32px;height:32px;border-radius:50%;
+  .lightbox.open .lightbox-figure img{transform:scale(1);}
+  .lightbox-figure figcaption{font-family:'JetBrains Mono',monospace;font-size:0.8rem;
+    color:#c9c2b3;text-align:center;max-width:640px;letter-spacing:0.01em;}
+  .lightbox .close,.lightbox .nav-btn{position:absolute;width:32px;height:32px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;
     color:#ece7dc;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.22);
     transition:background .25s var(--ease), border-color .25s var(--ease);}
-  .lightbox .close:hover{background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.55);}
+  .lightbox .close:hover,.lightbox .nav-btn:hover{background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.55);}
+  .lightbox .close{top:16px;right:18px;}
   .lightbox .close svg{width:12px;height:12px;pointer-events:none;}
+  .lightbox .nav-btn{top:50%;transform:translateY(-50%);width:40px;height:40px;}
+  .lightbox .nav-btn svg{width:16px;height:16px;pointer-events:none;}
+  .lightbox .nav-btn.prev{left:16px;}
+  .lightbox .nav-btn.next{right:16px;}
+  @media (max-width:640px){
+    .lightbox .nav-btn{width:34px;height:34px;}
+    .lightbox .nav-btn.prev{left:8px;}
+    .lightbox .nav-btn.next{right:8px;}
+  }
 
   /* ---- gallery ---- */
   section.gallery{padding:20px 0 120px;position:relative;}
@@ -169,10 +199,11 @@
   .cell .photo img{width:100%;height:auto;object-fit:initial;display:block;
     transition:transform .6s var(--ease), filter .4s var(--ease);}
   .cell:hover .photo img,.cell:focus-within .photo img{transform:scale(1.045);}
-  .grid.dimmed .cell .photo img{filter:brightness(0.55) saturate(0.75);}
+  .grid.dimmed .cell .photo img{filter:brightness(var(--gallery-dim-b)) saturate(var(--gallery-dim-s));}
   .grid.dimmed .cell:hover .photo img,.grid.dimmed .cell.active .photo img{filter:brightness(1) saturate(1);}
   .cell .cap-line{border-top:1px solid var(--glass-border);min-height:36px;display:flex;align-items:center;
-    padding:0 12px;margin:0;font-size:0.78rem;color:var(--muted);letter-spacing:0.01em;position:relative;}
+    padding:0 12px;margin:0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);
+    letter-spacing:0.01em;position:relative;}
   figure{margin:0;}
 
   /* dark-mode-only "flashlight" that dims everything except a soft circle around the cursor */
@@ -215,7 +246,7 @@
   .contact-frame .c-icon{flex:0 0 auto;width:20px;height:20px;color:var(--muted);}
   .contact-frame .c-icon svg{width:100%;height:100%;}
   .contact-frame .c-text{display:flex;flex-direction:column;gap:2px;min-width:0;}
-  .contact-frame .c-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);}
+  .contact-frame .c-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);}
   .contact-frame .c-value{font-size:0.95rem;word-break:break-all;}
   .contact-panel .close{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--text);
     font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;}
@@ -234,8 +265,12 @@
     header nav a::after{transition:none;}
     .carousel-item{transition:none;}
     .lightbox{transition:none;}
+    .lightbox-figure img{transition:none;}
     .glass::before{transition:none;}
     .contact-panel,.contact-backdrop{transition:none;}
+    header .name{transition:none;opacity:1;transform:none;}
+    header nav a,.featured-head a,.theme-toggle{transition:none;}
+    .theme-wipe{display:none;}
   }
 </style>
 </head>
@@ -271,6 +306,7 @@
         <p>I don't always look for perfect frames. I look for moments that feel worth remembering.</p>
         <p>Apart from photography, I'm a Computer Science Engineering student at IET Lucknow, graduating in 2029.</p>
         <p>This portfolio is a collection of the moments I've seen, noticed, and decided to keep.</p>
+        <p class="bio-meta">Lucknow, India — Add your camera/gear here</p>
       </div>
     </div>
   </section>
@@ -306,7 +342,12 @@
 
 <div class="lightbox" id="lightbox">
   <button class="close" id="lightbox-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
-  <img id="lightbox-img" alt="">
+  <button class="nav-btn prev" id="lightbox-prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="nav-btn next" id="lightbox-next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-img" alt="">
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
 </div>
 
 <div class="contact-backdrop" id="contact-backdrop"></div>
@@ -341,8 +382,26 @@ function applyTheme(theme){
 function toggleTheme(){
   const current = document.documentElement.getAttribute('data-theme') || 'dark';
   const next = current === 'dark' ? 'light' : 'dark';
-  applyTheme(next);
-  try{ localStorage.setItem('theme', next); }catch(e){}
+  const commit = () => { applyTheme(next); try{ localStorage.setItem('theme', next); }catch(e){} };
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const btn = document.getElementById('theme-toggle');
+  if(reduceMotion || !btn){ commit(); return; }
+
+  const rect = btn.getBoundingClientRect();
+  const x = rect.left + rect.width / 2, y = rect.top + rect.height / 2;
+  const r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+
+  const overlay = document.createElement('div');
+  overlay.className = 'theme-wipe';
+  overlay.style.setProperty('--x', x + 'px');
+  overlay.style.setProperty('--y', y + 'px');
+  overlay.style.background = next === 'dark' ? '#0b0a08' : '#f3efe7';
+  document.body.appendChild(overlay);
+
+  requestAnimationFrame(() => { overlay.style.clipPath = `circle(${r}px at ${x}px ${y}px)`; });
+
+  setTimeout(() => { commit(); overlay.remove(); }, 600);
 }
 function initTheme(){
   let saved = 'dark';
@@ -450,6 +509,42 @@ function initHeroParallax(){
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+// hero fades and eases back very slightly as the page scrolls into the bio section
+function initHeroScrollFade(){
+  const hero = document.getElementById('hero');
+  if(!hero || prefersReducedMotion) return;
+  const onScroll = () => {
+    const p = Math.min(1, window.scrollY / hero.offsetHeight);
+    hero.style.opacity = String(1 - p * 0.6);
+    hero.style.transform = `scale(${1 - p * 0.06})`;
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+}
+
+// one-time name reveal on first load, separate from the per-section scroll reveals
+function initIntro(){
+  const name = document.querySelector('header .name');
+  if(!name) return;
+  requestAnimationFrame(() => name.classList.add('in'));
+}
+
+// nav links and small buttons nudge very slightly toward the cursor when it's near —
+// skipped on touch screens (no hover) and when the person prefers reduced motion
+function initMagneticHover(){
+  if(prefersReducedMotion || window.matchMedia('(pointer: coarse)').matches) return;
+  const targets = document.querySelectorAll('header nav a, .theme-toggle, .featured-head a');
+  targets.forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const relX = e.clientX - (rect.left + rect.width / 2);
+      const relY = e.clientY - (rect.top + rect.height / 2);
+      el.style.transform = `translate(${(relX * 0.25).toFixed(1)}px, ${(relY * 0.25).toFixed(1)}px)`;
+    });
+    el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+  });
+}
+
 let carouselAngle = 0;
 let carouselItemAngle = 0;
 
@@ -484,7 +579,7 @@ function buildCarousel(items){
     img.src = p.url_medium || p.url;
     el.appendChild(img);
     el.addEventListener('click', () => {
-      if(el.classList.contains('is-center')) openLightbox(p);
+      if(el.classList.contains('is-center')) openLightbox(items, i);
     });
     ring.appendChild(el);
   });
@@ -530,12 +625,30 @@ function snapCarouselToNearest(){
   applyCarouselRotation();
 }
 
-function openLightbox(p){
-  const lb = document.getElementById('lightbox');
+let lightboxState = { list: [], index: 0 };
+
+function openLightbox(list, index){
+  lightboxState = { list, index };
+  renderLightbox();
+  document.getElementById('lightbox').classList.add('open');
+}
+function renderLightbox(){
+  const { list, index } = lightboxState;
+  const p = list[index];
+  if(!p) return;
   const img = document.getElementById('lightbox-img');
   img.src = p.url;
   img.alt = p.caption || '';
-  lb.classList.add('open');
+  document.getElementById('lightbox-caption').textContent = p.caption || '';
+  const multi = list.length > 1;
+  document.getElementById('lightbox-prev').style.display = multi ? '' : 'none';
+  document.getElementById('lightbox-next').style.display = multi ? '' : 'none';
+}
+function lightboxStep(delta){
+  const { list } = lightboxState;
+  if(list.length < 2) return;
+  lightboxState.index = (lightboxState.index + delta + list.length) % list.length;
+  renderLightbox();
 }
 function closeLightbox(){
   document.getElementById('lightbox').classList.remove('open');
@@ -586,12 +699,29 @@ function initCarouselInteraction(){
   });
 
   document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+  document.getElementById('lightbox-prev').addEventListener('click', () => lightboxStep(-1));
+  document.getElementById('lightbox-next').addEventListener('click', () => lightboxStep(1));
   document.getElementById('lightbox').addEventListener('click', (e) => {
     if(e.target.id === 'lightbox') closeLightbox();
   });
   document.addEventListener('keydown', (e) => {
     if(e.key === 'Escape'){ closeLightbox(); closeContactPanel(); }
+    if(!document.getElementById('lightbox').classList.contains('open')) return;
+    if(e.key === 'ArrowLeft') lightboxStep(-1);
+    if(e.key === 'ArrowRight') lightboxStep(1);
   });
+
+  // swipe to move between photos on touch screens
+  const lightboxEl = document.getElementById('lightbox');
+  let swipeStartX = null;
+  lightboxEl.addEventListener('touchstart', (e) => { swipeStartX = e.touches[0].clientX; }, {passive:true});
+  lightboxEl.addEventListener('touchend', (e) => {
+    if(swipeStartX === null) return;
+    const dx = e.changedTouches[0].clientX - swipeStartX;
+    swipeStartX = null;
+    if(Math.abs(dx) < 40) return;
+    lightboxStep(dx < 0 ? 1 : -1);
+  }, {passive:true});
 }
 
 // Local admin PC: the FastAPI backend answers live. Deployed static site: no backend exists,
@@ -636,10 +766,10 @@ async function loadSite(){
   fullGrid.innerHTML = featured.length
     ? ''
     : '<p class="empty-note">No featured photos yet.</p>';
-  featured.forEach(p => {
+  featured.forEach((p, idx) => {
     const el = photoEl(p, {sizes:'(max-width:640px) 50vw, 380px'});
     el.classList.add('glass', 'fitem');
-    el.addEventListener('click', () => openLightbox(p));
+    el.addEventListener('click', () => openLightbox(featured, idx));
     fullGrid.appendChild(el);
   });
 
@@ -648,7 +778,7 @@ async function loadSite(){
   galleryGrid.innerHTML = gallery.length
     ? ''
     : '<p class="empty-note">No photos uploaded yet — this fills in as soon as you add some from <code>/admin-ui</code>.</p>';
-  gallery.forEach(p => {
+  gallery.forEach((p, idx) => {
     const cell = document.createElement('figure');
     cell.className = 'cell';
     const frame = document.createElement('div');
@@ -661,7 +791,7 @@ async function loadSite(){
       frame.appendChild(capLine);
     }
     cell.appendChild(frame);
-    frame.addEventListener('click', () => openLightbox(p));
+    frame.addEventListener('click', () => openLightbox(gallery, idx));
     galleryGrid.appendChild(cell);
   });
 }
@@ -698,6 +828,9 @@ initContactPanel();
 initHeaderScrollState();
 initScrollReveals();
 initCarouselInteraction();
+initHeroScrollFade();
+initIntro();
+initMagneticHover();
 loadSite();
 </script>
 </body>
