@@ -17,7 +17,7 @@ from PIL import Image
 from sqlmodel import Session, select
 
 # >>> After your first Vercel deploy, put your real site address here (once). <<<
-SITE_URL = os.environ.get("SITE_URL", "https://YOUR-SITE.vercel.app").rstrip("/")
+SITE_URL = os.environ.get("SITE_URL", "https://anant-portfolio-photography.vercel.app").rstrip("/")
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ROOT)
