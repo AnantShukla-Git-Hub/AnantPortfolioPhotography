@@ -14,7 +14,7 @@ from app.storage import save_image, delete_image
 router = APIRouter(prefix="/api/admin", tags=["admin"])
 limiter = Limiter(key_func=get_remote_address)
 
-MAX_UPLOAD_BYTES = 15 * 1024 * 1024  # 15 MB
+MAX_UPLOAD_BYTES = 50 * 1024 * 1024  # 50 MB
 
 
 @router.post("/login")
