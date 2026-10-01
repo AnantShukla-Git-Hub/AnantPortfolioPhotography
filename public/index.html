@@ -10,12 +10,12 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Anant Shukla — Photography">
 <meta property="og:description" content="An ordinary photographer capturing simple moments.">
-<meta property="og:url" content="https://anant-portfolio-photography.vercel.app/">
-<meta property="og:image" content="https://anant-portfolio-photography.vercel.app/og-image.jpg">
+<meta property="og:url" content="https://YOUR-SITE.vercel.app/">
+<meta property="og:image" content="https://YOUR-SITE.vercel.app/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://anant-portfolio-photography.vercel.app/og-image.jpg">
+<meta name="twitter:image" content="https://YOUR-SITE.vercel.app/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -104,11 +104,10 @@
   .empty-note{color:var(--muted);font-size:0.92rem;padding:14px 0;}
 
   /* ---- hero ---- */
-  .hero{height:100svh;min-height:520px;position:relative;}
-  .hero .photo{position:absolute;inset:0;border-radius:0;}
+  .hero{position:relative;width:100%;}
+  .hero .photo{position:relative;width:100%;height:auto;border-radius:0;}
   .hero .parallax-layer{width:100%;height:100%;will-change:transform;transition:transform .25s var(--ease);}
-  .hero .photo img{animation:kenburns 22s ease-in-out infinite alternate;}
-  @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.07)}}
+  .hero .photo img{width:100%;height:auto;object-fit:initial;display:block;}
   .hero .caption{position:absolute;left:28px;bottom:56px;max-width:640px;z-index:2;
     opacity:0;transform:translateY(14px);transition:opacity 1s var(--ease) .3s, transform 1s var(--ease) .3s;}
   .hero .caption.in{opacity:1;transform:translateY(0);}
@@ -117,24 +116,19 @@
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.55), transparent 40%);pointer-events:none;z-index:1;}
 
   /* ---- bio ---- */
-  section.bio{padding:110px 0 80px;}
-  .bio-inner{display:flex;gap:72px;align-items:center;}
-  .bio-portrait{flex:0 0 280px;width:280px;aspect-ratio:4/5;border-radius:3px;overflow:hidden;}
-  .bio-portrait img{width:100%;height:100%;object-fit:cover;filter:grayscale(12%);
-    transition:transform .8s var(--ease), filter .5s var(--ease);}
-  .bio-portrait:hover img{transform:scale(1.04);filter:grayscale(0);}
+  section.bio{padding:96px 0 64px;}
+  .bio-inner{display:flex;gap:56px;align-items:flex-start;}
+  .bio-portrait{flex:0 0 220px;width:220px;aspect-ratio:1/1;border-radius:2px;overflow:hidden;}
+  .bio-portrait img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);}
   .bio-text{flex:1;min-width:0;}
-  .bio-text h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.9rem,4vw,2.6rem);
-    line-height:1.1;letter-spacing:-0.01em;margin:0 0 28px;}
-  .bio-text h2::after{content:"";display:block;width:44px;height:1px;background:var(--muted);margin-top:22px;}
-  section.bio p{max-width:580px;font-size:1.02rem;line-height:1.75;color:var(--copy);margin:0 0 18px;}
-  section.bio .bio-text p:first-of-type{font-family:'Fraunces',serif;font-size:1.3rem;line-height:1.55;color:var(--text);}
+  .bio-text h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.3rem;margin:0 0 18px;}
+  section.bio p{max-width:600px;font-size:1.05rem;color:var(--copy);margin:0 0 16px;}
   section.bio p:last-child{margin-bottom:0;}
+  .bio-meta{font-family:'JetBrains Mono',monospace !important;font-size:0.78rem !important;
+    color:var(--muted) !important;letter-spacing:0.02em;margin-top:18px !important;}
   @media (max-width:640px){
-    section.bio{padding:72px 0 48px;}
-    .bio-inner{flex-direction:column;align-items:flex-start;gap:32px;}
-    .bio-portrait{flex:0 0 auto;width:200px;}
-    section.bio .bio-text p:first-of-type{font-size:1.15rem;}
+    .bio-inner{flex-direction:column;gap:28px;}
+    .bio-portrait{flex:0 0 auto;width:150px;}
   }
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease), transform .8s var(--ease);}
   .reveal.in{opacity:1;transform:translateY(0);}
@@ -311,6 +305,7 @@
         <p>I don't always look for perfect frames. I look for moments that feel worth remembering.</p>
         <p>Apart from photography, I'm a Computer Science Engineering student at IET Lucknow, graduating in 2029.</p>
         <p>This portfolio is a collection of the moments I've seen, noticed, and decided to keep.</p>
+        <p class="bio-meta">Lucknow, India — Add your camera/gear here</p>
       </div>
     </div>
   </section>
@@ -756,7 +751,7 @@ async function loadSite(){
   const heroSlot = document.getElementById('hero-photo');
   if(heroPhoto){
     heroSlot.classList.remove('skeleton');
-    heroSlot.appendChild(photoEl(heroPhoto, {eager:true, parallax:true, sizes:'100vw'}));
+    heroSlot.appendChild(photoEl(heroPhoto, {eager:true, sizes:'100vw'}));
   } else {
     heroSlot.classList.remove('skeleton');
     heroSlot.innerHTML = '<p class="empty-note" style="position:absolute;bottom:56px;left:28px;">No photos yet — upload your first one from <code>/admin-ui</code>.</p>';
@@ -764,7 +759,7 @@ async function loadSite(){
   document.querySelector('.hero .caption').classList.add('in');
   initHeroParallax();
 
-  buildCarousel(featured.slice(0,20));
+  buildCarousel(featured);
 
   const fullGrid = document.getElementById('featured-grid-full');
   fullGrid.innerHTML = featured.length
