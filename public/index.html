@@ -10,12 +10,12 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Anant Shukla — Photography">
 <meta property="og:description" content="An ordinary photographer capturing simple moments.">
-<meta property="og:url" content="https://YOUR-SITE.vercel.app/">
-<meta property="og:image" content="https://YOUR-SITE.vercel.app/og-image.jpg">
+<meta property="og:url" content="https://anant-portfolio-photography.vercel.app/">
+<meta property="og:image" content="https://anant-portfolio-photography.vercel.app/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://YOUR-SITE.vercel.app/og-image.jpg">
+<meta name="twitter:image" content="https://anant-portfolio-photography.vercel.app/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -32,23 +32,17 @@
     --glass-border:rgba(255,255,255,0.14);
     --glass-blur:16px;
     --glow:rgba(255,255,255,0.55);
-    --carousel-dim-b:0.42; --carousel-dim-s:0.65;
-    --gallery-dim-b:0.55; --gallery-dim-s:0.75;
     --glass-shadow:none;
   }
   :root[data-theme="light"]{
-    --bg:#f3efe7; --text:#2a241c; --muted:#7a6f60; --copy:#453f34;
-    --line:rgba(30,25,18,0.14);
-    --panel:#e9e2d3; --shimmer-a:#e6dfd0; --shimmer-b:#f1ebdf;
-    --glass-bg:rgba(255,255,255,0.5);
-    --glass-border:rgba(30,25,18,0.18);
-    --glass-blur:16px;
-    --glow:rgba(196,138,58,0.55);
-    /* the carousel/gallery dim effects were tuned for a dark backdrop and looked
-       too harsh/muddy on a light page, so they are gentler here */
-    --carousel-dim-b:0.78; --carousel-dim-s:0.9;
-    --gallery-dim-b:0.82; --gallery-dim-s:0.92;
-    --glass-shadow:0 4px 24px -8px rgba(30,25,18,0.16);
+    --bg:#faf8f4; --text:#2b2520; --muted:#8a7f72; --copy:#3d3530;
+    --line:rgba(43,37,32,0.12);
+    --panel:#f1ede6; --shimmer-a:#f1ede6; --shimmer-b:#faf8f4;
+    --glass-bg:rgba(255,255,255,0.65);
+    --glass-border:rgba(43,37,32,0.15);
+    --glass-blur:12px;
+    --glow:rgba(180,130,70,0.5);
+    --glass-shadow:0 3px 20px -6px rgba(43,37,32,0.14);
   }
   *{box-sizing:border-box}
   html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;}
@@ -108,12 +102,24 @@
   .hero .photo{position:relative;width:100%;height:auto;border-radius:0;}
   .hero .parallax-layer{width:100%;height:100%;will-change:transform;transition:transform .25s var(--ease);}
   .hero .photo img{width:100%;height:auto;object-fit:initial;display:block;}
-  .hero .caption{position:absolute;left:28px;bottom:56px;max-width:640px;z-index:2;
+  .hero .caption{position:absolute;left:32px;bottom:48px;max-width:min(520px, 40vw);z-index:2;
     opacity:0;transform:translateY(14px);transition:opacity 1s var(--ease) .3s, transform 1s var(--ease) .3s;}
   .hero .caption.in{opacity:1;transform:translateY(0);}
-  .hero h1{margin:0;font-size:clamp(2.2rem,6vw,4.2rem);font-weight:500;line-height:1.03;color:#ece7dc;}
+  .hero h1{margin:0;font-size:clamp(1.8rem,3.8vw,2.8rem);font-weight:500;line-height:1.15;color:#ece7dc;}
   .hero p{margin:14px 0 0;color:#c9c2b3;font-size:1rem;}
+  @media (max-width:1024px){
+    .hero .caption{max-width:min(450px, 45vw);left:28px;bottom:40px;}
+    .hero h1{font-size:clamp(1.6rem,3.5vw,2.4rem);}
+  }
+  @media (max-width:768px){
+    .hero .caption{max-width:min(200px, 45vw);left:12px;bottom:20px;}
+    .hero h1{font-size:clamp(1rem,3vw,1.4rem);line-height:1.3;}
+    .hero p{font-size:0.68rem;margin-top:6px;}
+  }
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.55), transparent 40%);pointer-events:none;z-index:1;}
+  @media (max-width:768px){
+    .hero{border-bottom:1px solid var(--line);}
+  }
 
   /* ---- bio ---- */
   section.bio{padding:96px 0 64px;}
@@ -126,6 +132,9 @@
   section.bio p:last-child{margin-bottom:0;}
   .bio-meta{font-family:'JetBrains Mono',monospace !important;font-size:0.78rem !important;
     color:var(--muted) !important;letter-spacing:0.02em;margin-top:18px !important;}
+  @media (max-width:768px){
+    section.bio{padding:48px 0 48px;}
+  }
   @media (max-width:640px){
     .bio-inner{flex-direction:column;gap:28px;}
     .bio-portrait{flex:0 0 auto;width:150px;}
@@ -148,9 +157,9 @@
   .carousel-item{position:absolute;top:0;left:0;width:200px;height:280px;border-radius:3px;
     overflow:hidden;background:var(--panel);backface-visibility:hidden;border:1px solid transparent;
     transition:filter .35s var(--ease), opacity .35s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease);
-    filter:brightness(var(--carousel-dim-b)) saturate(var(--carousel-dim-s));opacity:0.85;}
+    opacity:0.92;}
   .carousel-item img{width:100%;height:100%;object-fit:cover;pointer-events:none;}
-  .carousel-item.is-center{filter:brightness(1) saturate(1);opacity:1;cursor:pointer;
+  .carousel-item.is-center{opacity:1;cursor:pointer;
     border-color:var(--glow);box-shadow:0 0 20px -6px var(--glow);}
   .carousel-hint{text-align:center;font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);margin-top:16px;}
 
@@ -196,10 +205,8 @@
   .cell .frame{border-radius:3px;cursor:pointer;}
   .cell .photo{width:100%;height:auto;overflow:hidden;border-radius:0;background:var(--panel);}
   .cell .photo img{width:100%;height:auto;object-fit:initial;display:block;
-    transition:transform .6s var(--ease), filter .4s var(--ease);}
+    transition:transform .6s var(--ease);}
   .cell:hover .photo img,.cell:focus-within .photo img{transform:scale(1.045);}
-  .grid.dimmed .cell .photo img{filter:brightness(var(--gallery-dim-b)) saturate(var(--gallery-dim-s));}
-  .grid.dimmed .cell:hover .photo img,.grid.dimmed .cell.active .photo img{filter:brightness(1) saturate(1);}
   .cell .cap-line{border-top:1px solid var(--glass-border);min-height:36px;display:flex;align-items:center;
     padding:0 12px;margin:0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);
     letter-spacing:0.01em;position:relative;}
@@ -260,7 +267,6 @@
     .reveal{transition:none;opacity:1;transform:none;}
     .cell .photo img{transition:none;}
     .cell:hover .photo img,.cell:focus-within .photo img{transform:none;}
-    .grid.dimmed .cell .photo img{filter:none;}
     header nav a::after{transition:none;}
     .carousel-item{transition:none;}
     .lightbox{transition:none;}
@@ -431,17 +437,9 @@ function initSpotlight(){
   });
 }
 
-// Gallery focus (mouse only): once the pointer is inside the gallery, every photo dims a
-// little and only the one being pointed at shows fully clear. On touch screens there is no
-// hover, and a tap opens the photo in the popup instead, so no dimming is needed there.
+// Gallery focus (mouse only): disabled - no dimming effect
 function initGalleryFocus(){
-  const gallerySection = document.querySelector('section.gallery');
-  const grid = document.getElementById('gallery-grid');
-  if(!gallerySection || !grid) return;
-  if(window.matchMedia('(pointer: coarse)').matches) return;
-
-  gallerySection.addEventListener('mouseenter', () => grid.classList.add('dimmed'));
-  gallerySection.addEventListener('mouseleave', () => grid.classList.remove('dimmed'));
+  // Dimming effect removed for cleaner photo presentation
 }
 
 function openContactPanel(){
