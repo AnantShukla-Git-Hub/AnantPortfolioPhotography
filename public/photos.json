@@ -2,75 +2,236 @@
  "gallery": [
   {
    "id": 1,
-   "url": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_full.jpg",
-   "url_medium": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_medium.jpg",
-   "url_thumb": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_thumb.jpg",
-   "caption": ""
+   "url": "/photos/d4659a5badb448c08934ac97d8ee048b_full.jpg",
+   "url_medium": "/photos/d4659a5badb448c08934ac97d8ee048b_medium.jpg",
+   "url_thumb": "/photos/d4659a5badb448c08934ac97d8ee048b_thumb.jpg",
+   "caption": "Some eyes carry more stories than words ever could."
   },
   {
    "id": 2,
-   "url": "/photos/d2d13c867c974b22b6d90766a3334832_full.jpg",
-   "url_medium": "/photos/d2d13c867c974b22b6d90766a3334832_medium.jpg",
-   "url_thumb": "/photos/d2d13c867c974b22b6d90766a3334832_thumb.jpg",
-   "caption": ""
+   "url": "/photos/2758c2edefed4da0bd97776fd8750b46_full.jpg",
+   "url_medium": "/photos/2758c2edefed4da0bd97776fd8750b46_medium.jpg",
+   "url_thumb": "/photos/2758c2edefed4da0bd97776fd8750b46_thumb.jpg",
+   "caption": "In front of everyone, yet lost somewhere within himself"
   },
   {
    "id": 3,
-   "url": "/photos/2e24121395674ac9a5357fb482d94e3f_full.jpg",
-   "url_medium": "/photos/2e24121395674ac9a5357fb482d94e3f_medium.jpg",
-   "url_thumb": "/photos/2e24121395674ac9a5357fb482d94e3f_thumb.jpg",
-   "caption": ""
+   "url": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_full.jpg",
+   "url_medium": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_medium.jpg",
+   "url_thumb": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_thumb.jpg",
+   "caption": "Some souls don't need words to ask you to stay."
   },
   {
    "id": 4,
-   "url": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_full.jpg",
-   "url_medium": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_medium.jpg",
-   "url_thumb": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_thumb.jpg",
-   "caption": ""
+   "url": "/photos/d99abdd527dd458ba01313dd8183ae27_full.jpg",
+   "url_medium": "/photos/d99abdd527dd458ba01313dd8183ae27_medium.jpg",
+   "url_thumb": "/photos/d99abdd527dd458ba01313dd8183ae27_thumb.jpg",
+   "caption": "Even the sky needs to break before it remembers how to be beautiful."
   },
   {
    "id": 5,
-   "url": "/photos/aecd0e057c3644469c6e4cf5d1a9f76d_full.jpg",
-   "url_medium": "/photos/aecd0e057c3644469c6e4cf5d1a9f76d_medium.jpg",
-   "url_thumb": "/photos/aecd0e057c3644469c6e4cf5d1a9f76d_thumb.jpg",
-   "caption": ""
+   "url": "/photos/bf8a4205ea28458d9cf27eb95a64969a_full.jpg",
+   "url_medium": "/photos/bf8a4205ea28458d9cf27eb95a64969a_medium.jpg",
+   "url_thumb": "/photos/bf8a4205ea28458d9cf27eb95a64969a_thumb.jpg",
+   "caption": "Curiosity is the quietest way of discovering the world"
   },
   {
    "id": 6,
-   "url": "/photos/df7f2563daa944eca1d16c5897a8aa9d_full.jpg",
-   "url_medium": "/photos/df7f2563daa944eca1d16c5897a8aa9d_medium.jpg",
-   "url_thumb": "/photos/df7f2563daa944eca1d16c5897a8aa9d_thumb.jpg",
-   "caption": "light finding its way in dark"
+   "url": "/photos/5a7344d40ff64586b0eef59683be8d06_full.jpg",
+   "url_medium": "/photos/5a7344d40ff64586b0eef59683be8d06_medium.jpg",
+   "url_thumb": "/photos/5a7344d40ff64586b0eef59683be8d06_thumb.jpg",
+   "caption": "Light doesn't always arrive loudly; sometimes it simply finds a way through"
+  },
+  {
+   "id": 7,
+   "url": "/photos/52239bd7f5a7421692e7b1f7da534263_full.jpg",
+   "url_medium": "/photos/52239bd7f5a7421692e7b1f7da534263_medium.jpg",
+   "url_thumb": "/photos/52239bd7f5a7421692e7b1f7da534263_thumb.jpg",
+   "caption": "A place built for thousands can still feel strangely alone."
+  },
+  {
+   "id": 8,
+   "url": "/photos/c4dfbd8145fa493193f7eff5d091ad08_full.jpg",
+   "url_medium": "/photos/c4dfbd8145fa493193f7eff5d091ad08_medium.jpg",
+   "url_thumb": "/photos/c4dfbd8145fa493193f7eff5d091ad08_thumb.jpg",
+   "caption": "Something within us learns to let go."
+  },
+  {
+   "id": 9,
+   "url": "/photos/ec93804a45e14190a236b1af92815f4f_full.jpg",
+   "url_medium": "/photos/ec93804a45e14190a236b1af92815f4f_medium.jpg",
+   "url_thumb": "/photos/ec93804a45e14190a236b1af92815f4f_thumb.jpg",
+   "caption": "Sometimes, a little light is enough to cross a sea of darkness."
+  },
+  {
+   "id": 10,
+   "url": "/photos/25257724a3774b40890b9eb020e052c4_full.jpg",
+   "url_medium": "/photos/25257724a3774b40890b9eb020e052c4_medium.jpg",
+   "url_thumb": "/photos/25257724a3774b40890b9eb020e052c4_thumb.jpg",
+   "caption": "The day ends quietly, as if nothing was ever lost"
+  },
+  {
+   "id": 11,
+   "url": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_full.jpg",
+   "url_medium": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_medium.jpg",
+   "url_thumb": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_thumb.jpg",
+   "caption": "For a few moments, strangers forget they were ever strangers."
+  },
+  {
+   "id": 12,
+   "url": "/photos/c6c0a4c088a34a6eb065a6c9c2c4e752_full.jpg",
+   "url_medium": "/photos/c6c0a4c088a34a6eb065a6c9c2c4e752_medium.jpg",
+   "url_thumb": "/photos/c6c0a4c088a34a6eb065a6c9c2c4e752_thumb.jpg",
+   "caption": "Behind every face is a world the crowd will never know."
+  },
+  {
+   "id": 13,
+   "url": "/photos/da9fbf5844b34c39b20f69e89b0e3332_full.jpg",
+   "url_medium": "/photos/da9fbf5844b34c39b20f69e89b0e3332_medium.jpg",
+   "url_thumb": "/photos/da9fbf5844b34c39b20f69e89b0e3332_thumb.jpg",
+   "caption": "Time doesn't erase everything; sometimes it only makes the memories visible."
+  },
+  {
+   "id": 14,
+   "url": "/photos/d0bb9e0d6e0f4c3c9f816b1a09eade23_full.jpg",
+   "url_medium": "/photos/d0bb9e0d6e0f4c3c9f816b1a09eade23_medium.jpg",
+   "url_thumb": "/photos/d0bb9e0d6e0f4c3c9f816b1a09eade23_thumb.jpg",
+   "caption": "Time leaves, but its shadows remain."
+  },
+  {
+   "id": 15,
+   "url": "/photos/98633ddbde974ff28c6ab8255071df7f_full.jpg",
+   "url_medium": "/photos/98633ddbde974ff28c6ab8255071df7f_medium.jpg",
+   "url_thumb": "/photos/98633ddbde974ff28c6ab8255071df7f_thumb.jpg",
+   "caption": "Even in stillness, everything is in motion."
+  },
+  {
+   "id": 16,
+   "url": "/photos/e08ed35048af457981c986947da1bc6d_full.jpg",
+   "url_medium": "/photos/e08ed35048af457981c986947da1bc6d_medium.jpg",
+   "url_thumb": "/photos/e08ed35048af457981c986947da1bc6d_thumb.jpg",
+   "caption": "Framed by shadows."
+  },
+  {
+   "id": 17,
+   "url": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_full.jpg",
+   "url_medium": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_medium.jpg",
+   "url_thumb": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_thumb.jpg",
+   "caption": "Chasing the golden hour."
+  },
+  {
+   "id": 18,
+   "url": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_full.jpg",
+   "url_medium": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_medium.jpg",
+   "url_thumb": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_thumb.jpg",
+   "caption": "“Little soul, big eyes.”"
+  },
+  {
+   "id": 19,
+   "url": "/photos/48835ee7c47046e5bf6b56d93b9221c3_full.jpg",
+   "url_medium": "/photos/48835ee7c47046e5bf6b56d93b9221c3_medium.jpg",
+   "url_thumb": "/photos/48835ee7c47046e5bf6b56d93b9221c3_thumb.jpg",
+   "caption": "A nose for every little adventure."
+  },
+  {
+   "id": 20,
+   "url": "/photos/8bb2da397c23498ca1f45b55c080f9e9_full.jpg",
+   "url_medium": "/photos/8bb2da397c23498ca1f45b55c080f9e9_medium.jpg",
+   "url_thumb": "/photos/8bb2da397c23498ca1f45b55c080f9e9_thumb.jpg",
+   "caption": "Nature, caught in golden light."
+  },
+  {
+   "id": 21,
+   "url": "/photos/dc66dea0003044ff8175c61f65cdd09f_full.jpg",
+   "url_medium": "/photos/dc66dea0003044ff8175c61f65cdd09f_medium.jpg",
+   "url_thumb": "/photos/dc66dea0003044ff8175c61f65cdd09f_thumb.jpg",
+   "caption": "Lost in the city lights"
+  },
+  {
+   "id": 22,
+   "url": "/photos/1b33a24d7f58446383b30f87611c8ea7_full.jpg",
+   "url_medium": "/photos/1b33a24d7f58446383b30f87611c8ea7_medium.jpg",
+   "url_thumb": "/photos/1b33a24d7f58446383b30f87611c8ea7_thumb.jpg",
+   "caption": "“Where the day meets its end.”"
   }
  ],
  "featured": [
   {
    "id": 1,
-   "url": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_full.jpg",
-   "url_medium": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_medium.jpg",
-   "url_thumb": "/photos/aa6f392da28a42ceb1f33876dfdd95d4_thumb.jpg",
-   "caption": ""
-  },
-  {
-   "id": 2,
-   "url": "/photos/d2d13c867c974b22b6d90766a3334832_full.jpg",
-   "url_medium": "/photos/d2d13c867c974b22b6d90766a3334832_medium.jpg",
-   "url_thumb": "/photos/d2d13c867c974b22b6d90766a3334832_thumb.jpg",
-   "caption": ""
+   "url": "/photos/d4659a5badb448c08934ac97d8ee048b_full.jpg",
+   "url_medium": "/photos/d4659a5badb448c08934ac97d8ee048b_medium.jpg",
+   "url_thumb": "/photos/d4659a5badb448c08934ac97d8ee048b_thumb.jpg",
+   "caption": "Some eyes carry more stories than words ever could."
   },
   {
    "id": 3,
-   "url": "/photos/2e24121395674ac9a5357fb482d94e3f_full.jpg",
-   "url_medium": "/photos/2e24121395674ac9a5357fb482d94e3f_medium.jpg",
-   "url_thumb": "/photos/2e24121395674ac9a5357fb482d94e3f_thumb.jpg",
-   "caption": ""
+   "url": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_full.jpg",
+   "url_medium": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_medium.jpg",
+   "url_thumb": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_thumb.jpg",
+   "caption": "Some souls don't need words to ask you to stay."
   },
   {
-   "id": 4,
-   "url": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_full.jpg",
-   "url_medium": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_medium.jpg",
-   "url_thumb": "/photos/7a06479e8221403aaceaf37a1bf4ac1a_thumb.jpg",
-   "caption": ""
+   "id": 5,
+   "url": "/photos/bf8a4205ea28458d9cf27eb95a64969a_full.jpg",
+   "url_medium": "/photos/bf8a4205ea28458d9cf27eb95a64969a_medium.jpg",
+   "url_thumb": "/photos/bf8a4205ea28458d9cf27eb95a64969a_thumb.jpg",
+   "caption": "Curiosity is the quietest way of discovering the world"
+  },
+  {
+   "id": 8,
+   "url": "/photos/c4dfbd8145fa493193f7eff5d091ad08_full.jpg",
+   "url_medium": "/photos/c4dfbd8145fa493193f7eff5d091ad08_medium.jpg",
+   "url_thumb": "/photos/c4dfbd8145fa493193f7eff5d091ad08_thumb.jpg",
+   "caption": "Something within us learns to let go."
+  },
+  {
+   "id": 11,
+   "url": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_full.jpg",
+   "url_medium": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_medium.jpg",
+   "url_thumb": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_thumb.jpg",
+   "caption": "For a few moments, strangers forget they were ever strangers."
+  },
+  {
+   "id": 15,
+   "url": "/photos/98633ddbde974ff28c6ab8255071df7f_full.jpg",
+   "url_medium": "/photos/98633ddbde974ff28c6ab8255071df7f_medium.jpg",
+   "url_thumb": "/photos/98633ddbde974ff28c6ab8255071df7f_thumb.jpg",
+   "caption": "Even in stillness, everything is in motion."
+  },
+  {
+   "id": 16,
+   "url": "/photos/e08ed35048af457981c986947da1bc6d_full.jpg",
+   "url_medium": "/photos/e08ed35048af457981c986947da1bc6d_medium.jpg",
+   "url_thumb": "/photos/e08ed35048af457981c986947da1bc6d_thumb.jpg",
+   "caption": "Framed by shadows."
+  },
+  {
+   "id": 17,
+   "url": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_full.jpg",
+   "url_medium": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_medium.jpg",
+   "url_thumb": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_thumb.jpg",
+   "caption": "Chasing the golden hour."
+  },
+  {
+   "id": 18,
+   "url": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_full.jpg",
+   "url_medium": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_medium.jpg",
+   "url_thumb": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_thumb.jpg",
+   "caption": "“Little soul, big eyes.”"
+  },
+  {
+   "id": 19,
+   "url": "/photos/48835ee7c47046e5bf6b56d93b9221c3_full.jpg",
+   "url_medium": "/photos/48835ee7c47046e5bf6b56d93b9221c3_medium.jpg",
+   "url_thumb": "/photos/48835ee7c47046e5bf6b56d93b9221c3_thumb.jpg",
+   "caption": "A nose for every little adventure."
+  },
+  {
+   "id": 22,
+   "url": "/photos/1b33a24d7f58446383b30f87611c8ea7_full.jpg",
+   "url_medium": "/photos/1b33a24d7f58446383b30f87611c8ea7_medium.jpg",
+   "url_thumb": "/photos/1b33a24d7f58446383b30f87611c8ea7_thumb.jpg",
+   "caption": "“Where the day meets its end.”"
   }
  ]
 }
