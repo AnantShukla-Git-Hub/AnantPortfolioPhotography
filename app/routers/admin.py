@@ -49,7 +49,7 @@ def upload_photo(
 ):
     raw = file.file.read(MAX_UPLOAD_BYTES + 1)
     if len(raw) > MAX_UPLOAD_BYTES:
-        raise HTTPException(status_code=413, detail="File too large (max 15MB)")
+        raise HTTPException(status_code=413, detail="File too large (max 50MB)")
 
     try:
         image = Image.open(io.BytesIO(raw))
