@@ -5,273 +5,451 @@
    "url": "/photos/d4659a5badb448c08934ac97d8ee048b_full.jpg",
    "url_medium": "/photos/d4659a5badb448c08934ac97d8ee048b_medium.jpg",
    "url_thumb": "/photos/d4659a5badb448c08934ac97d8ee048b_thumb.jpg",
-   "caption": "Some eyes carry more stories than words ever could."
+   "caption": "Some eyes carry more stories than words ever could.",
+   "r": "3/2",
+   "rr": "1800/1012",
+   "c": "#99734d",
+   "c2": "#4c351e"
   },
   {
    "id": 2,
    "url": "/photos/2758c2edefed4da0bd97776fd8750b46_full.jpg",
    "url_medium": "/photos/2758c2edefed4da0bd97776fd8750b46_medium.jpg",
    "url_thumb": "/photos/2758c2edefed4da0bd97776fd8750b46_thumb.jpg",
-   "caption": "In front of everyone, yet lost somewhere within himself"
+   "caption": "In front of everyone, yet lost somewhere within himself",
+   "r": "4/5",
+   "rr": "1800/2391",
+   "c": "#994d4d",
+   "c2": "#4c1e1e"
   },
   {
    "id": 3,
    "url": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_full.jpg",
    "url_medium": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_medium.jpg",
    "url_thumb": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_thumb.jpg",
-   "caption": "Some souls don't need words to ask you to stay."
+   "caption": "Some souls don't need words to ask you to stay.",
+   "r": "4/5",
+   "rr": "1800/2746",
+   "c": "#99894d",
+   "c2": "#4c431e"
   },
   {
    "id": 4,
    "url": "/photos/d99abdd527dd458ba01313dd8183ae27_full.jpg",
    "url_medium": "/photos/d99abdd527dd458ba01313dd8183ae27_medium.jpg",
    "url_thumb": "/photos/d99abdd527dd458ba01313dd8183ae27_thumb.jpg",
-   "caption": "Even the sky needs to break before it remembers how to be beautiful."
+   "caption": "Even the sky needs to break before it remembers how to be beautiful.",
+   "r": "1/1",
+   "rr": "1800/1568",
+   "c": "#92994d",
+   "c2": "#484c1e"
   },
   {
    "id": 5,
    "url": "/photos/bf8a4205ea28458d9cf27eb95a64969a_full.jpg",
    "url_medium": "/photos/bf8a4205ea28458d9cf27eb95a64969a_medium.jpg",
    "url_thumb": "/photos/bf8a4205ea28458d9cf27eb95a64969a_thumb.jpg",
-   "caption": "Curiosity is the quietest way of discovering the world"
+   "caption": "Curiosity is the quietest way of discovering the world",
+   "r": "4/5",
+   "rr": "1800/2392",
+   "c": "#99784d",
+   "c2": "#4c381e"
   },
   {
    "id": 6,
    "url": "/photos/5a7344d40ff64586b0eef59683be8d06_full.jpg",
    "url_medium": "/photos/5a7344d40ff64586b0eef59683be8d06_medium.jpg",
    "url_thumb": "/photos/5a7344d40ff64586b0eef59683be8d06_thumb.jpg",
-   "caption": "Light doesn't always arrive loudly; sometimes it simply finds a way through"
+   "caption": "Light doesn't always arrive loudly; sometimes it simply finds a way through",
+   "r": "4/5",
+   "rr": "1800/2391",
+   "c": "#994e42",
+   "c2": "#4c2019"
   },
   {
    "id": 7,
    "url": "/photos/52239bd7f5a7421692e7b1f7da534263_full.jpg",
    "url_medium": "/photos/52239bd7f5a7421692e7b1f7da534263_medium.jpg",
    "url_thumb": "/photos/52239bd7f5a7421692e7b1f7da534263_thumb.jpg",
-   "caption": "A place built for thousands can still feel strangely alone."
+   "caption": "A place built for thousands can still feel strangely alone.",
+   "r": "4/5",
+   "rr": "1800/2391",
+   "c": "#99864d",
+   "c2": "#4c411e"
   },
   {
    "id": 8,
    "url": "/photos/c4dfbd8145fa493193f7eff5d091ad08_full.jpg",
    "url_medium": "/photos/c4dfbd8145fa493193f7eff5d091ad08_medium.jpg",
    "url_thumb": "/photos/c4dfbd8145fa493193f7eff5d091ad08_thumb.jpg",
-   "caption": "Something within us learns to let go."
+   "caption": "Something within us learns to let go.",
+   "r": "4/5",
+   "rr": "1800/2504",
+   "c": "#996003",
+   "c2": "#4c2f00"
   },
   {
    "id": 9,
    "url": "/photos/ec93804a45e14190a236b1af92815f4f_full.jpg",
    "url_medium": "/photos/ec93804a45e14190a236b1af92815f4f_medium.jpg",
    "url_thumb": "/photos/ec93804a45e14190a236b1af92815f4f_thumb.jpg",
-   "caption": "Sometimes, a little light is enough to cross a sea of darkness."
+   "caption": "Sometimes, a little light is enough to cross a sea of darkness.",
+   "r": "3/2",
+   "rr": "1800/791",
+   "c": "#99604d",
+   "c2": "#4c2a1e"
   },
   {
    "id": 10,
    "url": "/photos/25257724a3774b40890b9eb020e052c4_full.jpg",
    "url_medium": "/photos/25257724a3774b40890b9eb020e052c4_medium.jpg",
    "url_thumb": "/photos/25257724a3774b40890b9eb020e052c4_thumb.jpg",
-   "caption": "The day ends quietly, as if nothing was ever lost"
+   "caption": "The day ends quietly, as if nothing was ever lost",
+   "r": "4/5",
+   "rr": "1577/2235",
+   "c": "#995523",
+   "c2": "#4c2609"
   },
   {
    "id": 11,
    "url": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_full.jpg",
    "url_medium": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_medium.jpg",
    "url_thumb": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_thumb.jpg",
-   "caption": "For a few moments, strangers forget they were ever strangers."
+   "caption": "For a few moments, strangers forget they were ever strangers.",
+   "r": "3/2",
+   "rr": "1800/1355",
+   "c": "#624d99",
+   "c2": "#2b1e4c"
   },
   {
    "id": 12,
    "url": "/photos/c6c0a4c088a34a6eb065a6c9c2c4e752_full.jpg",
    "url_medium": "/photos/c6c0a4c088a34a6eb065a6c9c2c4e752_medium.jpg",
    "url_thumb": "/photos/c6c0a4c088a34a6eb065a6c9c2c4e752_thumb.jpg",
-   "caption": "Behind every face is a world the crowd will never know."
+   "caption": "Behind every face is a world the crowd will never know.",
+   "r": "4/5",
+   "rr": "1800/2391",
+   "c": "#990300",
+   "c2": "#4c0100"
   },
   {
    "id": 13,
    "url": "/photos/da9fbf5844b34c39b20f69e89b0e3332_full.jpg",
    "url_medium": "/photos/da9fbf5844b34c39b20f69e89b0e3332_medium.jpg",
    "url_thumb": "/photos/da9fbf5844b34c39b20f69e89b0e3332_thumb.jpg",
-   "caption": "Time doesn't erase everything; sometimes it only makes the memories visible."
+   "caption": "Time doesn't erase everything; sometimes it only makes the memories visible.",
+   "r": "4/5",
+   "rr": "1800/2391",
+   "c": "#99584d",
+   "c2": "#4c251e"
   },
   {
    "id": 14,
    "url": "/photos/d0bb9e0d6e0f4c3c9f816b1a09eade23_full.jpg",
    "url_medium": "/photos/d0bb9e0d6e0f4c3c9f816b1a09eade23_medium.jpg",
    "url_thumb": "/photos/d0bb9e0d6e0f4c3c9f816b1a09eade23_thumb.jpg",
-   "caption": "Time leaves, but its shadows remain."
+   "caption": "Time leaves, but its shadows remain.",
+   "r": "1/1",
+   "rr": "1800/1800",
+   "c": "#995443",
+   "c2": "#4c241a"
   },
   {
    "id": 15,
    "url": "/photos/98633ddbde974ff28c6ab8255071df7f_full.jpg",
    "url_medium": "/photos/98633ddbde974ff28c6ab8255071df7f_medium.jpg",
    "url_thumb": "/photos/98633ddbde974ff28c6ab8255071df7f_thumb.jpg",
-   "caption": "Even in stillness, everything is in motion."
+   "caption": "Even in stillness, everything is in motion.",
+   "r": "4/5",
+   "rr": "1800/2154",
+   "c": "#996a42",
+   "c2": "#4c3019"
   },
   {
    "id": 16,
    "url": "/photos/e08ed35048af457981c986947da1bc6d_full.jpg",
    "url_medium": "/photos/e08ed35048af457981c986947da1bc6d_medium.jpg",
    "url_thumb": "/photos/e08ed35048af457981c986947da1bc6d_thumb.jpg",
-   "caption": "Framed by shadows."
+   "caption": "Framed by shadows.",
+   "r": "4/5",
+   "rr": "1800/2250",
+   "c": "#995d3e",
+   "c2": "#4c2917"
   },
   {
    "id": 17,
    "url": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_full.jpg",
    "url_medium": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_medium.jpg",
    "url_thumb": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_thumb.jpg",
-   "caption": "Chasing the golden hour."
+   "caption": "Chasing the golden hour.",
+   "r": "4/5",
+   "rr": "1800/2488",
+   "c": "#997f3f",
+   "c2": "#4c3d18"
   },
   {
    "id": 18,
    "url": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_full.jpg",
    "url_medium": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_medium.jpg",
    "url_thumb": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_thumb.jpg",
-   "caption": "“Little soul, big eyes.”"
+   "caption": "“Little soul, big eyes.”",
+   "r": "1/1",
+   "rr": "360/360",
+   "c": "#99844d",
+   "c2": "#4c401e"
   },
   {
    "id": 19,
    "url": "/photos/48835ee7c47046e5bf6b56d93b9221c3_full.jpg",
    "url_medium": "/photos/48835ee7c47046e5bf6b56d93b9221c3_medium.jpg",
    "url_thumb": "/photos/48835ee7c47046e5bf6b56d93b9221c3_thumb.jpg",
-   "caption": "A nose for every little adventure."
+   "caption": "A nose for every little adventure.",
+   "r": "1/1",
+   "rr": "1439/1326",
+   "c": "#99734d",
+   "c2": "#4c351e"
   },
   {
    "id": 20,
    "url": "/photos/8bb2da397c23498ca1f45b55c080f9e9_full.jpg",
    "url_medium": "/photos/8bb2da397c23498ca1f45b55c080f9e9_medium.jpg",
    "url_thumb": "/photos/8bb2da397c23498ca1f45b55c080f9e9_thumb.jpg",
-   "caption": "Nature, caught in golden light."
+   "caption": "Nature, caught in golden light.",
+   "r": "4/5",
+   "rr": "1440/1920",
+   "c": "#60994d",
+   "c2": "#2a4c1e"
   },
   {
    "id": 21,
    "url": "/photos/dc66dea0003044ff8175c61f65cdd09f_full.jpg",
    "url_medium": "/photos/dc66dea0003044ff8175c61f65cdd09f_medium.jpg",
    "url_thumb": "/photos/dc66dea0003044ff8175c61f65cdd09f_thumb.jpg",
-   "caption": "Lost in the city lights"
+   "caption": "Lost in the city lights",
+   "r": "4/5",
+   "rr": "1355/1800",
+   "c": "#99604d",
+   "c2": "#4c2a1e"
   },
   {
    "id": 22,
    "url": "/photos/1b33a24d7f58446383b30f87611c8ea7_full.jpg",
    "url_medium": "/photos/1b33a24d7f58446383b30f87611c8ea7_medium.jpg",
    "url_thumb": "/photos/1b33a24d7f58446383b30f87611c8ea7_thumb.jpg",
-   "caption": "“Where the day meets its end.”"
+   "caption": "“Where the day meets its end.”",
+   "r": "4/5",
+   "rr": "1800/2391",
+   "c": "#99634d",
+   "c2": "#4c2c1e"
   },
   {
    "id": 23,
    "url": "/photos/1f9f0ad8de8047ebabaefe5da955b669_full.jpg",
    "url_medium": "/photos/1f9f0ad8de8047ebabaefe5da955b669_medium.jpg",
    "url_thumb": "/photos/1f9f0ad8de8047ebabaefe5da955b669_thumb.jpg",
-   "caption": "“Between stillness and flight, freedom finds its form.”"
+   "caption": "“Between stillness and flight, freedom finds its form.”",
+   "r": "3/2",
+   "rr": "1800/1069",
+   "c": "#52a38d",
+   "c2": "#215144"
   },
   {
    "id": 24,
    "url": "/photos/419949e520764ac89a5e3df748aa3b10_full.jpg",
    "url_medium": "/photos/419949e520764ac89a5e3df748aa3b10_medium.jpg",
    "url_thumb": "/photos/419949e520764ac89a5e3df748aa3b10_thumb.jpg",
-   "caption": "**“In the quiet between shadow and light, even the smallest presence becomes a story.”**"
+   "caption": "**“In the quiet between shadow and light, even the smallest presence becomes a story.”**",
+   "r": "4/5",
+   "rr": "1483/2079",
+   "c": "#99604d",
+   "c2": "#4c2a1e"
   },
   {
    "id": 25,
    "url": "/photos/63dc2eb6dd2a416288ee285e849ae313_full.jpg",
    "url_medium": "/photos/63dc2eb6dd2a416288ee285e849ae313_medium.jpg",
    "url_thumb": "/photos/63dc2eb6dd2a416288ee285e849ae313_thumb.jpg",
-   "caption": "“Where light meets stillness, the horizon holds its reflection.”"
+   "caption": "“Where light meets stillness, the horizon holds its reflection.”",
+   "r": "1/1",
+   "rr": "1800/1800",
+   "c": "#997048",
+   "c2": "#4c341c"
   },
   {
    "id": 26,
    "url": "/photos/cd6a0b3e70fd44df98bc9144dd13070b_full.jpg",
    "url_medium": "/photos/cd6a0b3e70fd44df98bc9144dd13070b_medium.jpg",
    "url_thumb": "/photos/cd6a0b3e70fd44df98bc9144dd13070b_thumb.jpg",
-   "caption": "“A timeless portrait of strength, tradition, and life along the river.”"
+   "caption": "“A timeless portrait of strength, tradition, and life along the river.”",
+   "r": "4/5",
+   "rr": "1800/2305",
+   "c": "#4d4d99",
+   "c2": "#1e1e4c"
   },
   {
    "id": 27,
    "url": "/photos/3537a2d6ff1940b0bb48027e8cc30275_full.jpg",
    "url_medium": "/photos/3537a2d6ff1940b0bb48027e8cc30275_medium.jpg",
    "url_thumb": "/photos/3537a2d6ff1940b0bb48027e8cc30275_thumb.jpg",
-   "caption": "“Where heritage stands timeless beneath the fading light.”"
+   "caption": "“Where heritage stands timeless beneath the fading light.”",
+   "r": "1/1",
+   "rr": "1800/1525",
+   "c": "#a47d45",
+   "c2": "#523b1a"
   },
   {
    "id": 28,
    "url": "/photos/ce676f719483405b9cc1b40553f36388_full.jpg",
    "url_medium": "/photos/ce676f719483405b9cc1b40553f36388_medium.jpg",
    "url_thumb": "/photos/ce676f719483405b9cc1b40553f36388_thumb.jpg",
-   "caption": "“A closer look at the quiet work that keeps nature moving.”"
+   "caption": "“A closer look at the quiet work that keeps nature moving.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#998f1f",
+   "c2": "#4c4708"
   },
   {
    "id": 29,
    "url": "/photos/ee9c8c94034f4d61b3f81e03b30a33e2_full.jpg",
    "url_medium": "/photos/ee9c8c94034f4d61b3f81e03b30a33e2_medium.jpg",
    "url_thumb": "/photos/ee9c8c94034f4d61b3f81e03b30a33e2_thumb.jpg",
-   "caption": "“Behind the barriers, a wild spirit still watches the world.”"
+   "caption": "“Behind the barriers, a wild spirit still watches the world.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#99744d",
+   "c2": "#4c361e"
   },
   {
    "id": 30,
    "url": "/photos/2c7fa5cb7b6f4d57b0825d918a857265_full.jpg",
    "url_medium": "/photos/2c7fa5cb7b6f4d57b0825d918a857265_medium.jpg",
    "url_thumb": "/photos/2c7fa5cb7b6f4d57b0825d918a857265_thumb.jpg",
-   "caption": "“Rain leaves behind a beauty that needs no introduction.”"
+   "caption": "“Rain leaves behind a beauty that needs no introduction.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#5c993a",
+   "c2": "#294c15"
   },
   {
    "id": 31,
    "url": "/photos/eb8e58dade0c42f98afa379f03924f21_full.jpg",
    "url_medium": "/photos/eb8e58dade0c42f98afa379f03924f21_medium.jpg",
    "url_thumb": "/photos/eb8e58dade0c42f98afa379f03924f21_thumb.jpg",
-   "caption": "“Winter leaves its quiet signature in droplets of dew.”"
+   "caption": "“Winter leaves its quiet signature in droplets of dew.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#58994d",
+   "c2": "#254c1e"
   },
   {
    "id": 32,
    "url": "/photos/db0dde7ffad848e68711b0591a200ce4_full.jpg",
    "url_medium": "/photos/db0dde7ffad848e68711b0591a200ce4_medium.jpg",
    "url_thumb": "/photos/db0dde7ffad848e68711b0591a200ce4_thumb.jpg",
-   "caption": "“Softness, framed in silence.”"
+   "caption": "“Softness, framed in silence.”",
+   "r": "4/5",
+   "rr": "1355/1800",
+   "c": "#994d51",
+   "c2": "#4c1e21"
   },
   {
    "id": 33,
    "url": "/photos/15a16fea90fa4288898c5b83783a29fa_full.jpg",
    "url_medium": "/photos/15a16fea90fa4288898c5b83783a29fa_medium.jpg",
    "url_thumb": "/photos/15a16fea90fa4288898c5b83783a29fa_thumb.jpg",
-   "caption": "“Where light fades, the details remain.”"
+   "caption": "“Where light fades, the details remain.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#589910",
+   "c2": "#284c00"
   },
   {
    "id": 34,
    "url": "/photos/fe9d836d271e413db9102bb5fb4c3670_full.jpg",
    "url_medium": "/photos/fe9d836d271e413db9102bb5fb4c3670_medium.jpg",
    "url_thumb": "/photos/fe9d836d271e413db9102bb5fb4c3670_thumb.jpg",
-   "caption": "“Elegance, resting in the wild.”"
+   "caption": "“Elegance, resting in the wild.”",
+   "r": "4/5",
+   "rr": "1355/1800",
+   "c": "#729928",
+   "c2": "#364c0c"
   },
   {
    "id": 35,
    "url": "/photos/ece69e428ab44c35b23c9c890b0035b1_full.jpg",
    "url_medium": "/photos/ece69e428ab44c35b23c9c890b0035b1_medium.jpg",
    "url_thumb": "/photos/ece69e428ab44c35b23c9c890b0035b1_thumb.jpg",
-   "caption": "“A moment rooted in tradition, witnessed in stillness.”"
+   "caption": "“A moment rooted in tradition, witnessed in stillness.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#994a21",
+   "c2": "#4c2008"
   },
   {
    "id": 36,
    "url": "/photos/aa838bd648064363a6042324b5961ea4_full.jpg",
    "url_medium": "/photos/aa838bd648064363a6042324b5961ea4_medium.jpg",
    "url_thumb": "/photos/aa838bd648064363a6042324b5961ea4_thumb.jpg",
-   "caption": "“Some moments speak without words.”"
+   "caption": "“Some moments speak without words.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#99340b",
+   "c2": "#4c1600"
   },
   {
    "id": 37,
    "url": "/photos/029fc6787264439aa42c85434b6b2f4e_full.jpg",
    "url_medium": "/photos/029fc6787264439aa42c85434b6b2f4e_medium.jpg",
    "url_thumb": "/photos/029fc6787264439aa42c85434b6b2f4e_thumb.jpg",
-   "caption": "“A quiet pause, shared without a sound.”"
+   "caption": "“A quiet pause, shared without a sound.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#9aa352",
+   "c2": "#4c5121"
   },
   {
    "id": 38,
    "url": "/photos/50b131d8f53d4f9893795857ff7c2e7e_full.jpg",
    "url_medium": "/photos/50b131d8f53d4f9893795857ff7c2e7e_medium.jpg",
    "url_thumb": "/photos/50b131d8f53d4f9893795857ff7c2e7e_thumb.jpg",
-   "caption": ""
+   "caption": "",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#995a26",
+   "c2": "#4c280b"
   },
   {
    "id": 39,
    "url": "/photos/81b676d92fcb4e9a9f38358e2fcd93e9_full.jpg",
    "url_medium": "/photos/81b676d92fcb4e9a9f38358e2fcd93e9_medium.jpg",
    "url_thumb": "/photos/81b676d92fcb4e9a9f38358e2fcd93e9_thumb.jpg",
-   "caption": ""
+   "caption": "",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#991b0d",
+   "c2": "#4c0700"
+  },
+  {
+   "id": 40,
+   "url": "/photos/ae645206eb0f4b2db54d80620a3725e9_full.jpg",
+   "url_medium": "/photos/ae645206eb0f4b2db54d80620a3725e9_medium.jpg",
+   "url_thumb": "/photos/ae645206eb0f4b2db54d80620a3725e9_thumb.jpg",
+   "caption": "\"Fly high as you can...\"",
+   "r": "3/2",
+   "rr": "1212/782",
+   "c": "#5989b2",
+   "c2": "#244059"
+  },
+  {
+   "id": 41,
+   "url": "/photos/78df54318a71446ba8010923d2582e9d_full.jpg",
+   "url_medium": "/photos/78df54318a71446ba8010923d2582e9d_medium.jpg",
+   "url_thumb": "/photos/78df54318a71446ba8010923d2582e9d_thumb.jpg",
+   "caption": "\"Light finds its way in dark\"",
+   "r": "4/5",
+   "rr": "1152/1407",
+   "c": "#994e1d",
+   "c2": "#4c2206"
   }
  ],
  "featured": [
@@ -280,140 +458,247 @@
    "url": "/photos/d4659a5badb448c08934ac97d8ee048b_full.jpg",
    "url_medium": "/photos/d4659a5badb448c08934ac97d8ee048b_medium.jpg",
    "url_thumb": "/photos/d4659a5badb448c08934ac97d8ee048b_thumb.jpg",
-   "caption": "Some eyes carry more stories than words ever could."
+   "caption": "Some eyes carry more stories than words ever could.",
+   "r": "3/2",
+   "rr": "1800/1012",
+   "c": "#99734d",
+   "c2": "#4c351e"
   },
   {
    "id": 3,
    "url": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_full.jpg",
    "url_medium": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_medium.jpg",
    "url_thumb": "/photos/c78c5abe1863412bac2d3a6b1ee015f3_thumb.jpg",
-   "caption": "Some souls don't need words to ask you to stay."
+   "caption": "Some souls don't need words to ask you to stay.",
+   "r": "4/5",
+   "rr": "1800/2746",
+   "c": "#99894d",
+   "c2": "#4c431e"
   },
   {
    "id": 5,
    "url": "/photos/bf8a4205ea28458d9cf27eb95a64969a_full.jpg",
    "url_medium": "/photos/bf8a4205ea28458d9cf27eb95a64969a_medium.jpg",
    "url_thumb": "/photos/bf8a4205ea28458d9cf27eb95a64969a_thumb.jpg",
-   "caption": "Curiosity is the quietest way of discovering the world"
+   "caption": "Curiosity is the quietest way of discovering the world",
+   "r": "4/5",
+   "rr": "1800/2392",
+   "c": "#99784d",
+   "c2": "#4c381e"
   },
   {
    "id": 8,
    "url": "/photos/c4dfbd8145fa493193f7eff5d091ad08_full.jpg",
    "url_medium": "/photos/c4dfbd8145fa493193f7eff5d091ad08_medium.jpg",
    "url_thumb": "/photos/c4dfbd8145fa493193f7eff5d091ad08_thumb.jpg",
-   "caption": "Something within us learns to let go."
+   "caption": "Something within us learns to let go.",
+   "r": "4/5",
+   "rr": "1800/2504",
+   "c": "#996003",
+   "c2": "#4c2f00"
   },
   {
    "id": 11,
    "url": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_full.jpg",
    "url_medium": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_medium.jpg",
    "url_thumb": "/photos/fcaf2285229b46019ace0ac1e0dd8a1f_thumb.jpg",
-   "caption": "For a few moments, strangers forget they were ever strangers."
+   "caption": "For a few moments, strangers forget they were ever strangers.",
+   "r": "3/2",
+   "rr": "1800/1355",
+   "c": "#624d99",
+   "c2": "#2b1e4c"
   },
   {
    "id": 15,
    "url": "/photos/98633ddbde974ff28c6ab8255071df7f_full.jpg",
    "url_medium": "/photos/98633ddbde974ff28c6ab8255071df7f_medium.jpg",
    "url_thumb": "/photos/98633ddbde974ff28c6ab8255071df7f_thumb.jpg",
-   "caption": "Even in stillness, everything is in motion."
+   "caption": "Even in stillness, everything is in motion.",
+   "r": "4/5",
+   "rr": "1800/2154",
+   "c": "#996a42",
+   "c2": "#4c3019"
   },
   {
    "id": 16,
    "url": "/photos/e08ed35048af457981c986947da1bc6d_full.jpg",
    "url_medium": "/photos/e08ed35048af457981c986947da1bc6d_medium.jpg",
    "url_thumb": "/photos/e08ed35048af457981c986947da1bc6d_thumb.jpg",
-   "caption": "Framed by shadows."
+   "caption": "Framed by shadows.",
+   "r": "4/5",
+   "rr": "1800/2250",
+   "c": "#995d3e",
+   "c2": "#4c2917"
   },
   {
    "id": 17,
    "url": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_full.jpg",
    "url_medium": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_medium.jpg",
    "url_thumb": "/photos/1e5c58ed5d8f4cea91c58e03ac5a3320_thumb.jpg",
-   "caption": "Chasing the golden hour."
+   "caption": "Chasing the golden hour.",
+   "r": "4/5",
+   "rr": "1800/2488",
+   "c": "#997f3f",
+   "c2": "#4c3d18"
   },
   {
    "id": 18,
    "url": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_full.jpg",
    "url_medium": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_medium.jpg",
    "url_thumb": "/photos/24e08c29b7e947f28f7f6ac5886f99d8_thumb.jpg",
-   "caption": "“Little soul, big eyes.”"
+   "caption": "“Little soul, big eyes.”",
+   "r": "1/1",
+   "rr": "360/360",
+   "c": "#99844d",
+   "c2": "#4c401e"
   },
   {
    "id": 19,
    "url": "/photos/48835ee7c47046e5bf6b56d93b9221c3_full.jpg",
    "url_medium": "/photos/48835ee7c47046e5bf6b56d93b9221c3_medium.jpg",
    "url_thumb": "/photos/48835ee7c47046e5bf6b56d93b9221c3_thumb.jpg",
-   "caption": "A nose for every little adventure."
+   "caption": "A nose for every little adventure.",
+   "r": "1/1",
+   "rr": "1439/1326",
+   "c": "#99734d",
+   "c2": "#4c351e"
   },
   {
    "id": 22,
    "url": "/photos/1b33a24d7f58446383b30f87611c8ea7_full.jpg",
    "url_medium": "/photos/1b33a24d7f58446383b30f87611c8ea7_medium.jpg",
    "url_thumb": "/photos/1b33a24d7f58446383b30f87611c8ea7_thumb.jpg",
-   "caption": "“Where the day meets its end.”"
+   "caption": "“Where the day meets its end.”",
+   "r": "4/5",
+   "rr": "1800/2391",
+   "c": "#99634d",
+   "c2": "#4c2c1e"
   },
   {
    "id": 26,
    "url": "/photos/cd6a0b3e70fd44df98bc9144dd13070b_full.jpg",
    "url_medium": "/photos/cd6a0b3e70fd44df98bc9144dd13070b_medium.jpg",
    "url_thumb": "/photos/cd6a0b3e70fd44df98bc9144dd13070b_thumb.jpg",
-   "caption": "“A timeless portrait of strength, tradition, and life along the river.”"
+   "caption": "“A timeless portrait of strength, tradition, and life along the river.”",
+   "r": "4/5",
+   "rr": "1800/2305",
+   "c": "#4d4d99",
+   "c2": "#1e1e4c"
   },
   {
    "id": 27,
    "url": "/photos/3537a2d6ff1940b0bb48027e8cc30275_full.jpg",
    "url_medium": "/photos/3537a2d6ff1940b0bb48027e8cc30275_medium.jpg",
    "url_thumb": "/photos/3537a2d6ff1940b0bb48027e8cc30275_thumb.jpg",
-   "caption": "“Where heritage stands timeless beneath the fading light.”"
+   "caption": "“Where heritage stands timeless beneath the fading light.”",
+   "r": "1/1",
+   "rr": "1800/1525",
+   "c": "#a47d45",
+   "c2": "#523b1a"
   },
   {
    "id": 29,
    "url": "/photos/ee9c8c94034f4d61b3f81e03b30a33e2_full.jpg",
    "url_medium": "/photos/ee9c8c94034f4d61b3f81e03b30a33e2_medium.jpg",
    "url_thumb": "/photos/ee9c8c94034f4d61b3f81e03b30a33e2_thumb.jpg",
-   "caption": "“Behind the barriers, a wild spirit still watches the world.”"
+   "caption": "“Behind the barriers, a wild spirit still watches the world.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#99744d",
+   "c2": "#4c361e"
   },
   {
    "id": 30,
    "url": "/photos/2c7fa5cb7b6f4d57b0825d918a857265_full.jpg",
    "url_medium": "/photos/2c7fa5cb7b6f4d57b0825d918a857265_medium.jpg",
    "url_thumb": "/photos/2c7fa5cb7b6f4d57b0825d918a857265_thumb.jpg",
-   "caption": "“Rain leaves behind a beauty that needs no introduction.”"
+   "caption": "“Rain leaves behind a beauty that needs no introduction.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#5c993a",
+   "c2": "#294c15"
   },
   {
    "id": 31,
    "url": "/photos/eb8e58dade0c42f98afa379f03924f21_full.jpg",
    "url_medium": "/photos/eb8e58dade0c42f98afa379f03924f21_medium.jpg",
    "url_thumb": "/photos/eb8e58dade0c42f98afa379f03924f21_thumb.jpg",
-   "caption": "“Winter leaves its quiet signature in droplets of dew.”"
+   "caption": "“Winter leaves its quiet signature in droplets of dew.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#58994d",
+   "c2": "#254c1e"
   },
   {
    "id": 34,
    "url": "/photos/fe9d836d271e413db9102bb5fb4c3670_full.jpg",
    "url_medium": "/photos/fe9d836d271e413db9102bb5fb4c3670_medium.jpg",
    "url_thumb": "/photos/fe9d836d271e413db9102bb5fb4c3670_thumb.jpg",
-   "caption": "“Elegance, resting in the wild.”"
+   "caption": "“Elegance, resting in the wild.”",
+   "r": "4/5",
+   "rr": "1355/1800",
+   "c": "#729928",
+   "c2": "#364c0c"
   },
   {
    "id": 35,
    "url": "/photos/ece69e428ab44c35b23c9c890b0035b1_full.jpg",
    "url_medium": "/photos/ece69e428ab44c35b23c9c890b0035b1_medium.jpg",
    "url_thumb": "/photos/ece69e428ab44c35b23c9c890b0035b1_thumb.jpg",
-   "caption": "“A moment rooted in tradition, witnessed in stillness.”"
+   "caption": "“A moment rooted in tradition, witnessed in stillness.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#994a21",
+   "c2": "#4c2008"
   },
   {
    "id": 37,
    "url": "/photos/029fc6787264439aa42c85434b6b2f4e_full.jpg",
    "url_medium": "/photos/029fc6787264439aa42c85434b6b2f4e_medium.jpg",
    "url_thumb": "/photos/029fc6787264439aa42c85434b6b2f4e_thumb.jpg",
-   "caption": "“A quiet pause, shared without a sound.”"
+   "caption": "“A quiet pause, shared without a sound.”",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#9aa352",
+   "c2": "#4c5121"
   },
   {
    "id": 38,
    "url": "/photos/50b131d8f53d4f9893795857ff7c2e7e_full.jpg",
    "url_medium": "/photos/50b131d8f53d4f9893795857ff7c2e7e_medium.jpg",
    "url_thumb": "/photos/50b131d8f53d4f9893795857ff7c2e7e_thumb.jpg",
-   "caption": ""
+   "caption": "",
+   "r": "1/1",
+   "rr": "1440/1440",
+   "c": "#995a26",
+   "c2": "#4c280b"
+  },
+  {
+   "id": 40,
+   "url": "/photos/ae645206eb0f4b2db54d80620a3725e9_full.jpg",
+   "url_medium": "/photos/ae645206eb0f4b2db54d80620a3725e9_medium.jpg",
+   "url_thumb": "/photos/ae645206eb0f4b2db54d80620a3725e9_thumb.jpg",
+   "caption": "\"Fly high as you can...\"",
+   "r": "3/2",
+   "rr": "1212/782",
+   "c": "#5989b2",
+   "c2": "#244059"
+  },
+  {
+   "id": 41,
+   "url": "/photos/78df54318a71446ba8010923d2582e9d_full.jpg",
+   "url_medium": "/photos/78df54318a71446ba8010923d2582e9d_medium.jpg",
+   "url_thumb": "/photos/78df54318a71446ba8010923d2582e9d_thumb.jpg",
+   "caption": "\"Light finds its way in dark\"",
+   "r": "4/5",
+   "rr": "1152/1407",
+   "c": "#994e1d",
+   "c2": "#4c2206"
   }
- ]
+ ],
+ "profile": {
+  "url": "/assets/anant-profile.jpg",
+  "rr": "1080/1440",
+  "v": "83bcc47d"
+ }
 }

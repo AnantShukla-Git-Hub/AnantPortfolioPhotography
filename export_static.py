@@ -7,6 +7,8 @@ public/: the watermarked photos, photos.json (captions, featured list) and og-im
 (the preview picture LinkedIn shows). The backend, database and admin panel are never
 part of the deployed site.
 """
+import colorsys
+import hashlib
 import json
 import os
 import re
@@ -27,6 +29,27 @@ SRC_DIR = os.path.join(ROOT, "storage", "photos")
 OUT_DIR = os.path.join(ROOT, "public")
 OUT_PHOTOS = os.path.join(OUT_DIR, "photos")
 INDEX_HTML = os.path.join(OUT_DIR, "index.html")
+PROFILE_SRC = os.path.join(ROOT, "storage", "profile.jpg")           # uploaded in the admin panel
+PROFILE_OUT = os.path.join(OUT_DIR, "assets", "anant-profile.jpg")   # shown in the About section
+
+
+def visual_meta(p):
+    """Layout ratio (r), real ratio (rr) and two accent colours (c, c2) for the new design."""
+    with Image.open(os.path.join(SRC_DIR, os.path.basename(p.url))) as im:
+        w, h = im.size
+    ratio = w / h
+    r = "3/2" if ratio > 1.25 else ("4/5" if ratio < 0.9 else "1/1")
+    with Image.open(os.path.join(SRC_DIR, os.path.basename(p.url_thumb))) as t:
+        R, G, B = t.convert("RGB").resize((1, 1), Image.LANCZOS).getpixel((0, 0))
+    hue, sat, val = colorsys.rgb_to_hsv(R / 255, G / 255, B / 255)
+    sat = min(1, max(sat, 0.45) * 1.1)
+    v1 = min(0.85, max(val, 0.6))
+    v2 = max(0.28, v1 * 0.5)
+
+    def hx(*hsv):
+        return "#%02x%02x%02x" % tuple(int(x * 255) for x in colorsys.hsv_to_rgb(*hsv))
+
+    return {"r": r, "rr": f"{w}/{h}", "c": hx(hue, sat, v1), "c2": hx(hue, min(1, sat + 0.1), v2)}
 
 
 def serialize(p):
@@ -36,6 +59,7 @@ def serialize(p):
         "url_medium": p.url_medium,
         "url_thumb": p.url_thumb,
         "caption": p.caption,
+        **visual_meta(p),
     }
 
 
@@ -65,6 +89,21 @@ def make_og_image(candidates):
             os.path.join(OUT_DIR, "og-image.jpg"), "JPEG", quality=85
         )
     return True
+
+
+def export_profile():
+    """Copy the admin-uploaded profile photo (if there is one) into public/assets and describe it.
+    The site reads this from photos.json, so the About frame always fits the photo."""
+    if os.path.exists(PROFILE_SRC):
+        os.makedirs(os.path.dirname(PROFILE_OUT), exist_ok=True)
+        shutil.copy2(PROFILE_SRC, PROFILE_OUT)
+    if not os.path.exists(PROFILE_OUT):
+        return None
+    with open(PROFILE_OUT, "rb") as f:
+        version = hashlib.md5(f.read()).hexdigest()[:8]  # changes when the photo changes -> no stale cache
+    with Image.open(PROFILE_OUT) as im:
+        w, h = im.size
+    return {"url": "/assets/anant-profile.jpg", "rr": f"{w}/{h}", "v": version}
 
 
 def set_meta(html, attr, key, value):
@@ -107,7 +146,7 @@ def main():
             removed += 1
 
     with open(os.path.join(OUT_DIR, "photos.json"), "w", encoding="utf-8") as f:
-        json.dump({"gallery": gallery, "featured": featured}, f, ensure_ascii=False, indent=1)
+        json.dump({"gallery": gallery, "featured": featured, "profile": export_profile()}, f, ensure_ascii=False, indent=1)
 
     og_ok = make_og_image(featured + gallery)
 

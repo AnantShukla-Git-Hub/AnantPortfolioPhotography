@@ -1,7 +1,9 @@
 import io
+import os
 
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Form, Response, Request
-from PIL import Image, UnidentifiedImageError
+from fastapi.responses import FileResponse
+from PIL import Image, ImageOps, UnidentifiedImageError
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 from sqlmodel import Session, select
@@ -9,12 +11,17 @@ from sqlmodel import Session, select
 from app.models import Photo, get_session
 from app.auth import authenticate_admin, create_access_token, require_admin, COOKIE_NAME
 from app.watermark import apply_watermark
-from app.storage import save_image, delete_image
+from app.storage import save_image, delete_image, STORAGE_DIR
 
 router = APIRouter(prefix="/api/admin", tags=["admin"])
 limiter = Limiter(key_func=get_remote_address)
 
 MAX_UPLOAD_BYTES = 50 * 1024 * 1024  # 50 MB
+
+# The About-section profile photo lives next to the photo folder: storage/profile.jpg
+# (storage/ is git-ignored; export_static.py copies it to public/assets/anant-profile.jpg).
+PROFILE_PATH = os.path.join(os.path.dirname(STORAGE_DIR), "profile.jpg")
+PROFILE_MAX_WIDTH = 1200
 
 
 @router.post("/login")
@@ -131,3 +138,33 @@ def list_all_for_admin(session: Session = Depends(get_session), _admin: str = De
         }
         for p in photos
     ]
+
+
+@router.post("/profile")
+def upload_profile(file: UploadFile = File(...), _admin: str = Depends(require_admin)):
+    """Replace the profile photo shown in the About section. Any size or shape works:
+    the site fits its frame to the photo, so nothing is cropped or stretched."""
+    raw = file.file.read(MAX_UPLOAD_BYTES + 1)
+    if len(raw) > MAX_UPLOAD_BYTES:
+        raise HTTPException(status_code=413, detail="File too large (max 50MB)")
+    try:
+        image = Image.open(io.BytesIO(raw))
+        image.load()
+    except (UnidentifiedImageError, OSError):
+        raise HTTPException(status_code=400, detail="File is not a valid image")
+
+    image = ImageOps.exif_transpose(image).convert("RGB")  # phone photos: honour rotation, drop EXIF/location
+    if image.width > PROFILE_MAX_WIDTH:
+        new_h = max(1, round(image.height * PROFILE_MAX_WIDTH / image.width))
+        image = image.resize((PROFILE_MAX_WIDTH, new_h), Image.LANCZOS)
+    os.makedirs(os.path.dirname(PROFILE_PATH), exist_ok=True)
+    image.save(PROFILE_PATH, "JPEG", quality=90, optimize=True, progressive=True)
+    return {"ok": True, "width": image.width, "height": image.height}
+
+
+@router.get("/profile")
+def current_profile(_admin: str = Depends(require_admin)):
+    """The current profile photo, for the preview in the admin panel."""
+    if not os.path.exists(PROFILE_PATH):
+        raise HTTPException(status_code=404, detail="No profile photo uploaded yet")
+    return FileResponse(PROFILE_PATH, media_type="image/jpeg", headers={"Cache-Control": "no-store"})

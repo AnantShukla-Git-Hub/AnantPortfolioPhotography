@@ -37,6 +37,15 @@
     <div class="msg" id="upload-msg"></div>
   </section>
 
+  <section id="profile-section" style="display:none">
+    <h2>Profile photo (About section)</h2>
+    <img id="profile-preview" alt="" style="display:none;max-width:160px;max-height:210px;border-radius:6px;margin:6px 0">
+    <div class="msg" id="profile-current">No profile photo uploaded yet.</div>
+    <input type="file" id="profile-file" accept="image/*" onchange="previewProfile()">
+    <button onclick="uploadProfile()">Upload profile photo</button>
+    <div class="msg" id="profile-msg"></div>
+  </section>
+
   <section id="list-section" style="display:none">
     <h2>All photos</h2>
     <div id="photo-list"></div>
@@ -53,7 +62,9 @@ async function login(){
     msg.textContent = 'Logged in.';
     document.getElementById('upload-section').style.display='block';
     document.getElementById('list-section').style.display='block';
+    document.getElementById('profile-section').style.display='block';
     loadPhotos();
+    loadProfile();
   } else {
     const data = await res.json();
     msg.textContent = 'Error: ' + (data.detail || res.status);
@@ -94,6 +105,32 @@ async function loadPhotos(){
       <button onclick="del(${p.id})">Delete</button>
     </div>
   `).join('');
+}
+
+async function loadProfile(){
+  const img = document.getElementById('profile-preview');
+  const res = await fetch('/api/admin/profile', {credentials:'include'});
+  if(!res.ok){ img.style.display='none'; document.getElementById('profile-current').textContent='No profile photo uploaded yet.'; return; }
+  img.src = URL.createObjectURL(await res.blob()); img.style.display='block';
+  document.getElementById('profile-current').textContent='Current profile photo:';
+}
+
+function previewProfile(){
+  const f = document.getElementById('profile-file').files[0];
+  if(!f) return;
+  const img = document.getElementById('profile-preview');
+  img.src = URL.createObjectURL(f); img.style.display='block';
+  document.getElementById('profile-current').textContent='Selected (not uploaded yet):';
+}
+
+async function uploadProfile(){
+  const f = document.getElementById('profile-file').files[0];
+  if(!f){ alert('Choose a photo first'); return; }
+  const form = new FormData(); form.append('file', f);
+  const res = await fetch('/api/admin/profile', {method:'POST', body: form, credentials:'include'});
+  const msg = document.getElementById('profile-msg');
+  if(res.ok){ msg.textContent='Saved. Run python export_static.py to publish it.'; document.getElementById('profile-file').value=''; loadProfile(); }
+  else { const data = await res.json(); msg.textContent='Error: ' + (data.detail || res.status); }
 }
 
 async function del(id){
